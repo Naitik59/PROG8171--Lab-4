@@ -50,6 +50,7 @@ class ViewController: UIViewController {
                 warningLabel.isHidden = false
             }
         } else { // one or more fields are empty
+            outputTextView.text = ""
             warningLabel.text = "Please fill up all the required details!"
             warningLabel.isHidden = false
         }
