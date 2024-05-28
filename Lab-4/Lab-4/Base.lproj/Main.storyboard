@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Constraint and Stacks" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mdk-PA-N1q">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lab 4 - Stack View Layout" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mdk-PA-N1q">
                                 <rect key="frame" x="10" y="69" width="410" height="23"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -263,7 +263,7 @@
                         <outlet property="firstNameTextField" destination="La8-sP-cvH" id="zoD-Ip-MKP"/>
                         <outlet property="outputTextView" destination="Ksl-9B-UNM" id="vBj-Pv-gXS"/>
                         <outlet property="surnameTextField" destination="1UF-9k-gkO" id="8lD-CL-ALH"/>
-                        <outlet property="warningLabel" destination="VM0-S5-DeX" id="FQL-ET-iAF"/>
+                        <outlet property="warningLabel" destination="VM0-S5-DeX" id="A39-gr-7fa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

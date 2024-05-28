@@ -33,27 +33,29 @@ class ViewController: UIViewController {
     
     @IBAction func acceptDidTapped(_ sender: UIButton) {
         
-        warningLabel.isHidden = true
+        warningLabel.textColor = .red
         
         if isAllTheFieldsCompleted() { // when all the fields are completed
             if let age = calculateAge() {
-                if age > 18 { // all the requirements are matched
-                    outputTextView.text = "I, \(firstNameTextField.text!) \(surnameTextField.text!), currently living at \(addressTextField.text!) in the city of \(cityTextField.text!) do hereby accept the terms and conditions os this assignment."
+                if age >= 18 { // all the requirements are matched
+                    outputTextView.text = "I, \(firstNameTextField.text!) \(surnameTextField.text!), currently living at \(addressTextField.text!) in the city of \(cityTextField.text!) do hereby accept the terms and conditions of this assignment."
                     
                     outputTextView.text += "\n\nI am \(age) and therefore able to accept the terms and conditions of this assignment"
+                    
+                    warningLabel.text = "You successfully accepted terms and conditions."
+                    warningLabel.textColor = .blue
                 } else { // below age 18
                     warningLabel.text = "You are under 18 so, not able to accept the terms and conditions of this assignment."
-                    warningLabel.isHidden = false
                 }
             } else { // invalid birthdate provided
                 warningLabel.text = "Please provide birth date in valid formate of dd/mm/yyyy."
-                warningLabel.isHidden = false
             }
         } else { // one or more fields are empty
             outputTextView.text = ""
             warningLabel.text = "Please fill up all the required details!"
-            warningLabel.isHidden = false
         }
+        
+        warningLabel.isHidden = false
     }
     
     private func setupView() {
@@ -84,8 +86,11 @@ class ViewController: UIViewController {
         addressTextField.text = ""
         cityTextField.text = ""
         dateOfBirthTextField.text = ""
-        outputTextView.text = isDeclineTapped ? "User has declined!" : ""
-        warningLabel.isHidden = true
+        outputTextView.text = ""
+        
+        warningLabel.isHidden = !isDeclineTapped
+        warningLabel.textColor = .red
+        warningLabel.text = isDeclineTapped ? "User has declined" : ""
     }
     
     // check that all the text fields are filled
